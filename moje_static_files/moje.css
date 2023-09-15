@@ -1,0 +1,92 @@
+body {
+    padding: 8rem;
+    background-attachment: fixed;
+    background-image: url('/media/zdjecia/shelf.jpg');
+    color: blanchedalmond;
+
+    }
+
+
+.ksiazka-okladka {
+    width: 150px;
+    float: left;
+    border: 0.5rem solid #085B06;
+    border-radius: 8px;
+}
+
+.book-icon {
+    font-size: 1.6rem;
+}
+
+.opis {
+    margin-left: 15px;
+}
+
+
+.autor-zdjecie {
+    width: 150px;
+    float: left;
+}
+
+#pierwszy { text-align: center;
+            font-family: Lobster;
+            font-size: 70px;
+            /*position:fixed;*/
+            }
+
+
+.card {
+       background-image: url('/media/zdjecia/tło_plaster_miodu.jpg');
+       text-align: center;
+       color: #600800;
+       display: block;
+       border: 6px solid;
+       border-color: black;
+       border-radius: 15px;
+       width: 600px;
+       height: 600px;
+       color: blanchedalmond;
+       padding: 12px;
+
+}
+
+.card-title{
+font-family: 'DM Serif Display', serif;
+text-align: right;
+color: blanchedalmond;
+}
+
+#pozycja_tytuł {
+font-size: 40px;
+text-align: right;
+color: blanchedalmond;
+}
+
+#pozycja_autor {
+font-size: 15px;
+color: blanchedalmond;
+text-align: right
+}
+
+#pozycja_opis {
+font-family: 'Mate', serif;
+color: blanchedalmond;
+text-align: right
+}
+
+.dodatkowe {
+color: blanchedalmond;
+font-family: 'Mate', serif;
+font-size: 15px;
+}
+
+.buttons {
+--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;
+background-color: blanchedalmond;
+border-radius: 10px;
+font-family: 'Mate', serif;
+font-weight: bold;
+text-transform: lowercase;}
+
+#edytuj_ksiazke .card {
+height = 1.5rem;}

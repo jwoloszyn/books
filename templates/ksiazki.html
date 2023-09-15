@@ -1,0 +1,45 @@
+{% extends 'glowny.html' %}
+{% load static %}
+
+
+{% block tytul %} Książki {% endblock %}
+{% block strona %}
+    {% if user.is_authenticated %}
+    <div>
+    <h6 class="display-4">Witaj {{user.username}}<br></h6>
+
+        <a href="{% url 'logout'%}"><button type="button" class="buttons">Wyloguj</button></a>
+    {% else %}
+        <a href="{% url 'login'%}">Login</a>
+    {% endif %}
+    </div>
+<hr>
+<h1 id="pierwszy"><i>Strona poświęcona książkom</i></h1>
+
+    <a href="{% url 'nowa'%}">Dodaj książkę<i class="fa-solid fa-plus"></i></a>
+
+    {%if ksiazki|length == 0 %}
+        <h5>Brak książek w bazie danych</h5>
+    {%else%}
+    <h5 class="dodatkowe">Ilość książek w bazie danych: {{ksiazki|length}}</h5>
+
+        {% for ksiazka in ksiazki %}
+            <div class="card">
+              <div class="card-body">
+                  <a href="{% url 'pozycja' ksiazka.id %}"><img src="/media/{{ksiazka.okladka}}" class="ksiazka-okladka">
+                  <div class="row">
+                      <div class="col-9">
+                        <a href="{% url 'pozycja' ksiazka.id %}"><h3 class="card-title">{{ ksiazka.tytul }}</h3> </a>
+                        <a href="{% url 'pisarz' ksiazka.id %}"><h6 class="card-title">{{ ksiazka.autor }}</h6></a>
+
+                      </div>
+                    <div class="col-3">
+                        <a href="{% url 'edytuj' ksiazka.id %}"><i class="fas fa-2x fa-edit film-icon"style="color: blanchedalmond;"></i></a>
+                        <a href="{% url 'usun' ksiazka.id %}"><i class="fas fa-2x fa-trash-alt film-icon" style="color: blanchedalmond;"></i></a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

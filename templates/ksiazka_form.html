@@ -1,0 +1,50 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+{% block tytul %} Formularz {% endblock %}
+{% block strona %}
+    <div class="card" id="edytuj_ksiazke">
+        <div class="card-body" id="edytuj_ksiazke">
+            {% if nowa %}
+                <h5 class="card-title">Nowa książka</h5>
+            {% else %}
+                <h5 class="card-title">Edytuj książkę</h5>
+            {% endif %}
+
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        {{ form_gatunek|bootstrap }}
+            {% if nowa %}
+                <button type="submit" value="Send" class="buttons" id="submit">Dodaj</button>
+            {% else %}
+                <button type="submit" value="Send" class="buttons" id="submit">Edytuj</button>
+            {% endif %}
+
+    </form>
+            <a href="{% url 'wszystkie_ksiazki' %}"><button type="submit" value="Send" class="buttons" id="submit">Cofnij</button></a>
+
+        </div>
+    </div>
+
+    {% if form_ocena %}
+    <div class="card" style="width: 32rem; float:left, margin-right: 1rem;">
+        <div class="card-body">
+            <h5 class="card-title">Oceń książkę</h5>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form_ocena|bootstrap }}
+                <button type="submit" value="Send" class="btn btn-success" id="submit">Oceń</button>
+            </form>
+        </div>
+
+    {% endif %}
+
+    {% for ocena in oceny %}
+        <h4>Gwiazdki: {{ocena.gwiazdki}}</h4>
+        <p>{{ocena.recenzja}}</p>
+    {% endfor %}
+    </div>
+
+
+{% endblock %}
+

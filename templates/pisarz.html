@@ -1,0 +1,24 @@
+{% extends 'glowny.html' %}
+{% load static %}
+{% block tytul %} Strona o autorze: {{pisarz.autor}} {% endblock %}
+{% block strona %}
+<div class="card">
+              <div class="card-body">
+                  <img src="/media/{{pisarz.zdjecie}}" class="autor-zdjecie">
+                  <div class="row">
+                      <div class="col-9">
+                        <h3 class="card-title">Autor: {{pisarz.autor}}</h3>
+                          <h5>{{pisarz.biogram}}</h5>
+                          <h5>Najważniejsze książki:</h5>
+                          <br><h6>{{pisarz.dzielo}}</h6>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+<div class="row">
+</div>
+<a href="{% url 'wszystkie_ksiazki' %}"><button type="button" class="buttons">Cofnij</a>
+
+
+{% endblock %}

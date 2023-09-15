@@ -1,0 +1,15 @@
+{% extends 'glowny.html' %}
+{% block tytul %} Potwierdź {% endblock %}
+    {% block strona %}
+    <div class="card" style="width: 32rem;">
+    <div class="card-body">
+        <h5 class="card-title">Czy jesteś pewien, że chcesz usunąć "{{ksiazka.tytul}}"?</h5>
+
+    <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Usuń</button>
+</form>
+    </div>
+    </div>
+<a href="{% url 'wszystkie_ksiazki' %}">Cofnij</a>
+{% endblock %}

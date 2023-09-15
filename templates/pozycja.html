@@ -1,0 +1,25 @@
+{% extends 'glowny.html' %}f
+{% load bootstrap %}
+{% block tytul %}  {% endblock %}
+{% block strona %}
+           <div class="card">
+              <div class="card-body">
+                  <img src="/media/{{ksiazka.okladka}}" class="ksiazka-okladka">
+                  <div class="row">
+                      <div class="col-9">
+
+                        <h1 class="card-title" id="pozycja_tytuł">{{ ksiazka.tytul }}</h1>
+                        <h2 class="card-title" id="pozycja_autor">{{ ksiazka.autor }}</h2>
+
+                        <h6 class="card-title">Wydawnictwo: {{ ksiazka.wydawnictwo }}</h6>
+                        <h6 class="card-title" class="body" id="pozycja_opis">Opis: <br> {{ ksiazka.opis }}</h6>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+<a href="{% url 'wszystkie_ksiazki' %}"><button type="button" class="buttons">Cofnij</a>
+
+
+{% endblock %}
