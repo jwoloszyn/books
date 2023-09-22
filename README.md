@@ -11,3 +11,11 @@ Project Status
 Room for Improvement
 Acknowledgements
 Contact
+# General Info
+The goal of the project is to create a space where persons passionate about the books could share their passion and knowledge with others as well as for those who look for information about writers and their publications. 
+The project is a proof of a gained knowledge during the process of learning. 
+# Technologies Used
+Python 3.8.0
+Django 4.2.2
+HTML5
+# Features
