@@ -19,3 +19,9 @@ The project is a proof of a gained knowledge during the process of learning.
 * Django 4.2.2
 * HTML5
 # Features
+# Setup
+The subject of the project is the website service which is expected to be available on every browser. The project was prepared with use of Pycharm and additionally with Visual Studio Code.
+# Usage
+
+# Project Status
+In progress.
