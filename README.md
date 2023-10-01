@@ -19,6 +19,13 @@ The project is a proof of a gained knowledge during the process of learning.
 * Django 4.2.2
 * HTML5
 # Features
+* Possibility of creating profiles of favourite books
+* Possibility of creating profiles of favourite authors
+* Possibility of editing profiles of books
+* Possibility of rating of favourite books
+* Possibility of editing profiles of authors
+* Possibility of linking books to their authors
+* Possibility of comment on favourite books (in progress)
 
 # Setup
 The subject of the project is the website service which is expected to be available on every browser. The project was prepared with use of Pycharm and additionally with Visual Studio Code.
@@ -26,4 +33,11 @@ The subject of the project is the website service which is expected to be availa
 (venv) C:\Users\janwo\OneDrive\Pulpit\projects\books>python manage.py runserver
 http://127.0.0.1:8000/ksiazki/wszystkie/
 # Project Status
-In progress.
+In progress
+# Room for Improvement
+* Possibility of editing profiles of authors
+* Possibility of linking books to their authors
+* Possibility of comment on favourite books (in progress)
+# Contact
+jan.woloszyn@gmail.com
+(+48) 795 859 078
