@@ -39,5 +39,5 @@ In progress
 * Possibility of linking books to their authors
 * Possibility of comment on favourite books (in progress)
 # Contact
-jan.woloszyn@gmail.com
-(+48) 795 859 078
+* jan.woloszyn@gmail.com
+* (+48) 795 859 078
